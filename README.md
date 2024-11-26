@@ -1,2 +1,2 @@
-# Q-Flutter
+# StudyHub-flutter
 Istinye University Student Projects.
