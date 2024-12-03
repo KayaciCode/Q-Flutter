@@ -1,2 +1,3 @@
-# StudyHub-flutter
-Istinye University Student Projects.
+# flutter_app
+
+A new Flutter project.
