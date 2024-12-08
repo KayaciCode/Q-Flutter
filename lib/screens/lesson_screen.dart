@@ -3,14 +3,16 @@ import 'package:flutter_app/core/constants.dart';
 
 import '../widgets/bottom_menu.dart';
 
-class ProfileScreen extends StatelessWidget {
-  const ProfileScreen({super.key});
+class LessonScreen extends StatelessWidget {
+  const LessonScreen ({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return const Scaffold(
+    return Scaffold(
       backgroundColor: arkaplanrenkim,
-      body: Center(child: Text("Profil Ekranım")),
+      body: Center(
+        child: Text("Derslerim"),
+      ),
       bottomNavigationBar: BottomMenu(),
     );
   }

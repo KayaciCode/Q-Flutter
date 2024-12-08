@@ -1,7 +1,12 @@
 import 'package:dotlottie_loader/dotlottie_loader.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/cupertino.dart';
+import 'package:flutter_app/core/constants.dart';
+import 'package:flutter_app/core/routes.dart';
+import 'package:go_router/go_router.dart';
 import 'package:lottie/lottie.dart';
+
+import '../widgets/bottom_menu.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
@@ -14,18 +19,20 @@ class HomeScreen extends StatelessWidget {
       // AppBar
       appBar: AppBar(
         title: const Text('Dersler'),
-        backgroundColor: Colors.white,
+        backgroundColor: arkaplanrenkim,
         actions: [
           IconButton(
             icon: const Icon(CupertinoIcons.book),
-            onPressed: () {},
+            onPressed: () {
+              context.go("/lesson");
+            },
           ),
         ],
       ),
 
       // Drawer (Yan Menü)
       drawer: Drawer(
-        backgroundColor: Colors.white,
+        backgroundColor: arkaplanrenkim,
         elevation: 0,
         child: Column(
           children: [
@@ -64,12 +71,13 @@ class HomeScreen extends StatelessWidget {
               leading: const Icon(CupertinoIcons.book),
               title: const Text('Dersler'),
               onTap: () {
+                context.go("/lesson");
                 Navigator.pop(context);
               },
             ),
             ListTile(
               leading: const Icon(CupertinoIcons.paperclip),
-              title: const Text('Son Ödevler'),
+              title: const Text('Geçmiş Ödevler'),
               onTap: () {
                 Navigator.pop(context);
               },
@@ -115,18 +123,7 @@ class HomeScreen extends StatelessWidget {
       ),
 
       // Alt navigasyon çubuğu
-      bottomNavigationBar: Container(
-        height: 70,
-        child: Row(
-          mainAxisAlignment: MainAxisAlignment.spaceAround,
-          children: [
-            IconButton(onPressed: () {}, icon: Icon(CupertinoIcons.home)),
-            IconButton(onPressed: () {}, icon: Icon(CupertinoIcons.book)),
-            IconButton(onPressed: () {}, icon: Icon(CupertinoIcons.search)),
-            IconButton(onPressed: () {}, icon: Icon(CupertinoIcons.person)),
-          ],
-        ),
-      ),
+      bottomNavigationBar: BottomMenu(),
     );
   }
 }
