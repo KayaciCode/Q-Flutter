@@ -15,25 +15,35 @@ class BottomMenu extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.spaceAround,
         children: [
           IconButton(
-              onPressed: () {
-                context.go("/home");
-              },
-              icon: Icon(CupertinoIcons.home)),
+              onPressed: () {},
+              icon: Icon(
+                CupertinoIcons.home,
+                color: Colors.black,
+              )),
           IconButton(
               onPressed: () {
                 context.go("/lesson");
               },
-              icon: Icon(CupertinoIcons.book)),
+              icon: Icon(
+                CupertinoIcons.book,
+                color: Colors.black,
+              )),
           IconButton(
               onPressed: () {
                 context.go("/search");
               },
-              icon: Icon(CupertinoIcons.search)),
+              icon: Icon(
+                CupertinoIcons.search,
+                color: Colors.black,
+              )),
           IconButton(
               onPressed: () {
                 context.go("/profile");
               },
-              icon: Icon(CupertinoIcons.person)),
+              icon: Icon(
+                CupertinoIcons.person,
+                color: Colors.black,
+              )),
         ],
       ),
     );

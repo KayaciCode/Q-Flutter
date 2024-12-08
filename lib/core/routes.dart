@@ -23,7 +23,7 @@ final router = GoRouter(
       path: '/profile',
       builder: (context, state) => const ProfileScreen(),
     ),
-    GoRoute(  
+    GoRoute(
       path: '/search',
       builder: (context, state) => const SearchScreen(),
     ),

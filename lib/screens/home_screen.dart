@@ -14,7 +14,7 @@ class HomeScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: const Color.fromARGB(255, 212, 230, 236),
+      backgroundColor: Colors.deepPurple,
 
       // AppBar
       appBar: AppBar(
@@ -32,7 +32,7 @@ class HomeScreen extends StatelessWidget {
 
       // Drawer (Yan Menü)
       drawer: Drawer(
-        backgroundColor: arkaplanrenkim,
+        backgroundColor: Colors.white,
         elevation: 0,
         child: Column(
           children: [
