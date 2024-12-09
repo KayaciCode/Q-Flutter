@@ -15,7 +15,9 @@ class BottomMenu extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.spaceAround,
         children: [
           IconButton(
-              onPressed: () {},
+              onPressed: () {
+                context.go("/home");
+              },
               icon: Icon(
                 CupertinoIcons.home,
                 color: Colors.black,
