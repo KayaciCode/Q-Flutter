@@ -28,6 +28,7 @@ class HomeScreen extends StatelessWidget {
             icon: const Icon(
               CupertinoIcons.book,
               color: Colors.black87,
+              size: 30,
             ),
             onPressed: () {
               context.go("/lesson");
