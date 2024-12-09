@@ -18,11 +18,17 @@ class HomeScreen extends StatelessWidget {
 
       // AppBar
       appBar: AppBar(
-        title: const Text('Dersler'),
+        title: const Text(
+          'Dersler',
+          selectionColor: Colors.black87,
+        ),
         backgroundColor: arkaplanrenkim,
         actions: [
           IconButton(
-            icon: const Icon(CupertinoIcons.book),
+            icon: const Icon(
+              CupertinoIcons.book,
+              color: Colors.black87,
+            ),
             onPressed: () {
               context.go("/lesson");
             },
@@ -42,17 +48,20 @@ class HomeScreen extends StatelessWidget {
               // color: Colors.blue,
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.center,
-                children: const [
-                  Icon(
-                    CupertinoIcons.person_circle,
-                    size: 80,
-                    color: Colors.black,
-                  ),
-                  SizedBox(height: 10),
-                  Text(
-                    'Kullanıcı Adı',
+                children: [
+                  IconButton(
+                      onPressed: () {
+                        context.go("/profile");
+                      },
+                      icon: const Icon(
+                        CupertinoIcons.person_circle_fill,
+                        color: Colors.black,
+                      )),
+                  const SizedBox(height: 10),
+                  const Text(
+                    'KayaciCode',
                     style: TextStyle(
-                      color: Colors.white,
+                      color: Colors.black,
                       fontSize: 18,
                     ),
                   ),
@@ -86,7 +95,7 @@ class HomeScreen extends StatelessWidget {
               leading: const Icon(CupertinoIcons.chart_bar_square),
               title: const Text('İstatikler'),
               onTap: () {
-                Navigator.pop(context);
+                context.go("/statistics");
               },
             ),
 
