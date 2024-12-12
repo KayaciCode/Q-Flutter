@@ -17,9 +17,13 @@ class ProfileScreen extends StatelessWidget {
     return Scaffold(
       backgroundColor: Colors.deepPurple,
       appBar: AppBar(
-        title: const Text('Profil'),
-        backgroundColor: Colors.deepPurple,
-      ),
+          title: const Text('Profil'),
+          backgroundColor: Colors.deepPurple,
+          leading: IconButton(
+              onPressed: () {
+                context.go("/home");
+              },
+              icon: const Icon(CupertinoIcons.return_icon))),
       body: Center(
         child: Padding(
           padding: const EdgeInsets.all(1.155),
@@ -50,9 +54,7 @@ class ProfileScreen extends StatelessWidget {
               ),
               const SizedBox(height: 20.0),
               ElevatedButton.icon(
-                onPressed: () {
-                  print('Düzenle butonuna basıldı');
-                },
+                onPressed: () {},
                 icon: const Icon(CupertinoIcons.pencil),
                 label: const Text('Profili Düzenle'),
                 style: ElevatedButton.styleFrom(
@@ -93,7 +95,6 @@ class ProfileScreen extends StatelessWidget {
               const SizedBox(height: 20.0),
               ElevatedButton.icon(
                 onPressed: () {
-                  print('Çıkış yapıldı');
                   context.go("/login");
                 },
                 icon: const Icon(CupertinoIcons.arrow_right_circle_fill),

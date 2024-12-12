@@ -60,7 +60,7 @@ class LoginScreen extends StatelessWidget {
                       InkWell(
                         onTap: () => context.go("/home"),
                         child: SizedBox(
-                          width: 100,
+                          width: 150,
                           child: DotLottieLoader.fromAsset(
                               "assets/motions/login.lottie", frameBuilder:
                                   (BuildContext ctx, DotLottie? dotlottie) {

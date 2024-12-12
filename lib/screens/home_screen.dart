@@ -19,19 +19,19 @@ class HomeScreen extends StatelessWidget {
       // AppBar
       appBar: AppBar(
         title: const Text(
-          'Dersler',
+          'StudyHub',
           selectionColor: Colors.black87,
         ),
         backgroundColor: arkaplanrenkim,
         actions: [
           IconButton(
             icon: const Icon(
-              CupertinoIcons.book,
+              CupertinoIcons.search,
               color: Colors.black87,
               size: 30,
             ),
             onPressed: () {
-              context.go("/lesson");
+              context.go("/search");
             },
           ),
         ],
@@ -90,6 +90,10 @@ class HomeScreen extends StatelessWidget {
                 leading: const Icon(CupertinoIcons.settings),
                 title: const Text('Ayarlar'),
                 onTap: () => context.go("/settings")),
+            ListTile(
+                leading: const Icon(CupertinoIcons.arrow_right_circle),
+                title: const Text('Çıkış Yap'),
+                onTap: () => context.go("/login")),
           ],
         ),
       ),

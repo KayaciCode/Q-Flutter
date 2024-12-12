@@ -3,12 +3,10 @@ import 'package:flutter/material.dart';
 import 'package:flutter_app/core/constants.dart';
 import 'package:flutter_app/core/routes.dart';
 import 'package:flutter_app/widgets/bottom_menu.dart';
-import 'dart:math';
-
 import 'package:go_router/go_router.dart';
 
-class StatisticsScreen extends StatelessWidget {
-  const StatisticsScreen({super.key});
+class SettingsScreen extends StatelessWidget {
+  const SettingsScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -19,13 +17,11 @@ class StatisticsScreen extends StatelessWidget {
               context.go("/home");
             },
             icon: const Icon(CupertinoIcons.return_icon)),
-        title: const Text('İstatistikler'),
+        title: const Text('Ayarlar'),
         backgroundColor: arkaplanrenkim,
       ),
-      backgroundColor: Colors.deepPurple,
-      body: Center(
-        child: Text("istatistik ekranim"),
-      ),
+      backgroundColor: arkaplanrenkim,
+      body: Center(),
       bottomNavigationBar: BottomMenu(),
     );
   }

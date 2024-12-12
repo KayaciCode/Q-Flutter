@@ -21,6 +21,7 @@ class BottomMenu extends StatelessWidget {
               icon: Icon(
                 CupertinoIcons.home,
                 color: Colors.black,
+                size: 30,
               )),
           IconButton(
               onPressed: () {
@@ -29,14 +30,16 @@ class BottomMenu extends StatelessWidget {
               icon: Icon(
                 CupertinoIcons.book,
                 color: Colors.black,
+                size: 30,
               )),
           IconButton(
               onPressed: () {
-                context.go("/search");
+                context.go("/statistics");
               },
               icon: Icon(
-                CupertinoIcons.search,
+                CupertinoIcons.graph_circle,
                 color: Colors.black,
+                size: 30,
               )),
           IconButton(
               onPressed: () {
@@ -45,6 +48,7 @@ class BottomMenu extends StatelessWidget {
               icon: Icon(
                 CupertinoIcons.person,
                 color: Colors.black,
+                size: 30,
               )),
         ],
       ),
