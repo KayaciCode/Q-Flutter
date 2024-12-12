@@ -50,14 +50,15 @@ class HomeScreen extends StatelessWidget {
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
-                  IconButton(
-                      onPressed: () {
-                        context.go("/profile");
-                      },
-                      icon: const Icon(
-                        CupertinoIcons.person_circle_fill,
-                        color: Colors.black,
-                      )),
+                  // Replace Imagea with a proper profile picture widget
+                  InkWell(
+                    onTap: () => context.go("/profile"),
+                    child: CircleAvatar(
+                      radius: 50.0,
+                      backgroundImage:
+                          AssetImage('assets/images/profile_image.jpg'),
+                    ),
+                  ),
                   const SizedBox(height: 10),
                   const Text(
                     'KayaciCode',
@@ -73,40 +74,22 @@ class HomeScreen extends StatelessWidget {
             ListTile(
               leading: const Icon(CupertinoIcons.home),
               title: const Text('Ana Sayfa'),
-              onTap: () {
-                Navigator.pop(context);
-              },
+              onTap: () => Navigator.pop(context),
             ),
             ListTile(
               leading: const Icon(CupertinoIcons.book),
-              title: const Text('Dersler'),
-              onTap: () {
-                context.go("/lesson");
-                Navigator.pop(context);
-              },
+              title: const Text('Derslerim'),
+              onTap: () => context.go("/lesson"),
             ),
             ListTile(
-              leading: const Icon(CupertinoIcons.paperclip),
-              title: const Text('Geçmiş Ödevler'),
-              onTap: () {
-                Navigator.pop(context);
-              },
+              leading: const Icon(CupertinoIcons.graph_circle),
+              title: const Text('İstatistikler'),
+              onTap: () => context.go("/statistics"),
             ),
             ListTile(
-              leading: const Icon(CupertinoIcons.chart_bar_square),
-              title: const Text('İstatikler'),
-              onTap: () {
-                context.go("/statistics");
-              },
-            ),
-
-            ListTile(
-              leading: const Icon(CupertinoIcons.settings),
-              title: const Text('Ayarlar'),
-              onTap: () {
-                Navigator.pop(context);
-              },
-            ),
+                leading: const Icon(CupertinoIcons.settings),
+                title: const Text('Ayarlar'),
+                onTap: () => context.go("/settings")),
           ],
         ),
       ),

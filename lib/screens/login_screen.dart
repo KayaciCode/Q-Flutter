@@ -1,6 +1,8 @@
+import 'package:dotlottie_loader/dotlottie_loader.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_app/components/rounded_input_field.dart';
 import 'package:flutter_svg/svg.dart';
+import 'package:go_router/go_router.dart';
 import 'package:lottie/lottie.dart';
 import 'login_screen.dart';
 
@@ -54,6 +56,22 @@ class LoginScreen extends StatelessWidget {
                         onChange: (value) {},
                         isEmail: false,
                         isPassword: true,
+                      ),
+                      InkWell(
+                        onTap: () => context.go("/home"),
+                        child: SizedBox(
+                          width: 100,
+                          child: DotLottieLoader.fromAsset(
+                              "assets/motions/login.lottie", frameBuilder:
+                                  (BuildContext ctx, DotLottie? dotlottie) {
+                            if (dotlottie != null) {
+                              return Lottie.memory(
+                                  dotlottie.animations.values.single);
+                            } else {
+                              return Container();
+                            }
+                          }),
+                        ),
                       ),
                     ],
                   )),
