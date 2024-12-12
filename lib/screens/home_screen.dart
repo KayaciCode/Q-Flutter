@@ -93,7 +93,7 @@ class HomeScreen extends StatelessWidget {
           ],
         ),
       ),
-      body: const ScreenState(), // Burada HomeScreenState'i kullanıyorsunuz
+      body: const ScreenState(),
       bottomNavigationBar: BottomMenu(),
       floatingActionButton: FloatingActionButton(
         onPressed: () => _showAlarmDialog(context),

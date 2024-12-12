@@ -16,7 +16,6 @@ class LoadingScreen extends StatelessWidget {
         // width: double.infinity,
         child: Column(
           children: [
-            // Logo bölümü
             Expanded(
               child: Container(
                 width: 250,
@@ -35,7 +34,7 @@ class LoadingScreen extends StatelessWidget {
             const SizedBox(height: 20),
 
             // Yükleniyor yazısı
-            // CircularProgressIndicator(),
+            const CircularProgressIndicator(),
 
             InkWell(
               onTap: () => context.go("/login"),
@@ -52,7 +51,7 @@ class LoadingScreen extends StatelessWidget {
               ),
             ),
 
-            SizedBox(
+            const SizedBox(
               height: 20,
             )
           ],
