@@ -41,9 +41,8 @@ class LoadingScreen extends StatelessWidget {
               onTap: () => context.go("/login"),
               child: SizedBox(
                 width: 200,
-                child:
-                    DotLottieLoader.fromAsset("assets/motions/loadingg.lottie",
-                        frameBuilder: (BuildContext ctx, DotLottie? dotlottie) {
+                child: DotLottieLoader.fromAsset("assets/motions/login.lottie",
+                    frameBuilder: (BuildContext ctx, DotLottie? dotlottie) {
                   if (dotlottie != null) {
                     return Lottie.memory(dotlottie.animations.values.single);
                   } else {
