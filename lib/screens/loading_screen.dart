@@ -34,7 +34,6 @@ class LoadingScreen extends StatelessWidget {
             const SizedBox(height: 20),
 
             // Yükleniyor yazısı
-            const CircularProgressIndicator(),
 
             InkWell(
               onTap: () => context.go("/login"),

@@ -1,4 +1,3 @@
-// uygulama da sayfaları ve navigasyonları burada kullanacağız
 import 'package:flutter/material.dart';
 import 'package:flutter_app/screens/login_screen.dart';
 import 'package:flutter_app/screens/search_screen.dart';

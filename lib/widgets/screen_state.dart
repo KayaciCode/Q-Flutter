@@ -84,7 +84,7 @@ class _ScreenState extends State<ScreenState> {
                       });
                     },
                     activeColor: Colors.deepPurple,
-                    checkColor: Colors.white,
+                    checkColor: Colors.green,
                     controlAffinity: ListTileControlAffinity.leading,
                   );
                 },
