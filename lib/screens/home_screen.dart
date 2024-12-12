@@ -1,27 +1,29 @@
-import 'package:dotlottie_loader/dotlottie_loader.dart';
-import 'package:flutter/material.dart';
 import 'package:flutter/cupertino.dart';
+import 'package:flutter/material.dart';
 import 'package:flutter_app/core/constants.dart';
-import 'package:flutter_app/core/routes.dart';
+import 'package:flutter_app/widgets/alarm_dialog.dart';
+import 'package:flutter_app/widgets/bottom_menu.dart';
 import 'package:go_router/go_router.dart';
-import 'package:lottie/lottie.dart';
-
-import '../widgets/bottom_menu.dart';
+import '../widgets/screen_state.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
+
+  void _showAlarmDialog(BuildContext context) {
+    showDialog(
+      context: context,
+      builder: (BuildContext context) {
+        return const AlarmDialog();
+      },
+    );
+  }
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.deepPurple,
-
-      // AppBar
       appBar: AppBar(
-        title: const Text(
-          'StudyHub',
-          selectionColor: Colors.black87,
-        ),
+        title: const Text('StudyHub'),
         backgroundColor: arkaplanrenkim,
         actions: [
           IconButton(
@@ -36,21 +38,16 @@ class HomeScreen extends StatelessWidget {
           ),
         ],
       ),
-
-      // Drawer (Yan Menü)
       drawer: Drawer(
         backgroundColor: Colors.white,
         elevation: 0,
         child: Column(
           children: [
-            // Drawer Header
             Container(
               height: 200,
-              // color: Colors.blue,
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
-                  // Replace Imagea with a proper profile picture widget
                   InkWell(
                     onTap: () => context.go("/profile"),
                     child: CircleAvatar(
@@ -70,7 +67,6 @@ class HomeScreen extends StatelessWidget {
                 ],
               ),
             ),
-            // Menü öğeleri
             ListTile(
               leading: const Icon(CupertinoIcons.home),
               title: const Text('Ana Sayfa'),
@@ -97,30 +93,18 @@ class HomeScreen extends StatelessWidget {
           ],
         ),
       ),
-
-      // Ana içerik
-      body: Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            // Animasyon
-            SizedBox(
-              width: 200,
-              child: DotLottieLoader.fromAsset("assets/motions/learn.lottie",
-                  frameBuilder: (BuildContext ctx, DotLottie? dotlottie) {
-                if (dotlottie != null) {
-                  return Lottie.memory(dotlottie.animations.values.single);
-                } else {
-                  return CircularProgressIndicator();
-                }
-              }),
-            ),
-          ],
+      body: const ScreenState(), // Burada HomeScreenState'i kullanıyorsunuz
+      bottomNavigationBar: BottomMenu(),
+      floatingActionButton: FloatingActionButton(
+        onPressed: () => _showAlarmDialog(context),
+        backgroundColor: Colors.white,
+        child: const Icon(
+          CupertinoIcons.alarm,
+          color: Colors.deepPurple,
+          size: 30,
         ),
       ),
-
-      // Alt navigasyon çubuğu
-      bottomNavigationBar: BottomMenu(),
+      floatingActionButtonLocation: FloatingActionButtonLocation.endFloat,
     );
   }
 }
