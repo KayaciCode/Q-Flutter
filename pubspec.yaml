@@ -12,6 +12,7 @@ dependencies:
   flutter:
     sdk: flutter
   flutter_secure_storage: ^9.2.2
+  flutter_svg: ^2.0.16
   go_router: ^14.6.1
   lottie: ^3.1.3
   shared_preferences: ^2.3.3
@@ -29,4 +30,3 @@ flutter:
     - assets/fonts/
     - assets/languages/
     - assets/motions/
-    

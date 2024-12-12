@@ -1,5 +1,6 @@
 // uygulama da sayfaları ve navigasyonları burada kullanacağız
 import 'package:flutter/material.dart';
+import 'package:flutter_app/screens/login_screen.dart';
 import 'package:flutter_app/screens/search_screen.dart';
 import 'package:flutter_app/screens/lesson_screen.dart';
 import 'package:flutter_app/screens/statistics_screen.dart';
@@ -35,6 +36,10 @@ final router = GoRouter(
     GoRoute(
       path: '/statistics',
       builder: (context, state) => const StatisticsScreen(),
+    ),
+    GoRoute(
+      path: '/login',
+      builder: (context, state) => const LoginScreen(),
     ),
   ],
 );

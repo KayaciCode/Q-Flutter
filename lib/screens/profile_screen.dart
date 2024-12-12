@@ -4,6 +4,7 @@ import 'package:flutter_app/core/constants.dart';
 import 'package:cupertino_icons/cupertino_icons.dart';
 import 'package:flutter_app/core/routes.dart';
 import 'package:flutter_app/main.dart';
+import 'package:flutter_app/screens/loading_screen.dart';
 import 'package:flutter_app/screens/statistics_screen.dart';
 import 'package:go_router/go_router.dart';
 import '../widgets/bottom_menu.dart';
@@ -93,6 +94,7 @@ class ProfileScreen extends StatelessWidget {
               ElevatedButton.icon(
                 onPressed: () {
                   print('Çıkış yapıldı');
+                  context.go("/login");
                 },
                 icon: const Icon(CupertinoIcons.arrow_right_circle_fill),
                 label: const Text('Çıkış Yap'),
