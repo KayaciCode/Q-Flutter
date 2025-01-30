@@ -1,58 +1,44 @@
-import 'package:dotlottie_loader/dotlottie_loader.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/cupertino.dart';
-import 'package:flutter_app/core/routes.dart';
 import 'package:go_router/go_router.dart';
 import 'package:lottie/lottie.dart';
 
-class LoadingScreen extends StatelessWidget {
+class LoadingScreen extends StatefulWidget {
   const LoadingScreen({super.key});
+
+  @override
+  State<LoadingScreen> createState() => _LoadingScreenState();
+}
+
+class _LoadingScreenState extends State<LoadingScreen> {
+  @override
+  void initState() {
+    super.initState();
+    _navigateToNextScreen();
+  }
+
+  Future<void> _navigateToNextScreen() async {
+    await Future.delayed(const Duration(seconds: 2));
+
+    if (mounted) {
+      context.go('/login');
+    }
+  }
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.deepPurple,
-      body: SizedBox.expand(
-        // width: double.infinity,
+      body: Center(
         child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            Expanded(
-              child: Container(
-                width: 250,
-                height: 250,
-                child: Image.asset(
-                  'assets/images/logo.webp',
-                  fit: BoxFit.contain,
-                ),
-              ),
+            Image.asset(
+              'assets/images/logo.webp',
+              width: 250,
+              height: 250,
+              fit: BoxFit.contain,
             ),
-
             const SizedBox(height: 30),
-
-            // Yükleme ikonu
-
-            const SizedBox(height: 20),
-
-            // Yükleniyor yazısı
-
-            InkWell(
-              onTap: () => context.go("/login"),
-              child: SizedBox(
-                width: 200,
-                child: DotLottieLoader.fromAsset("assets/motions/login.lottie",
-                    frameBuilder: (BuildContext ctx, DotLottie? dotlottie) {
-                  if (dotlottie != null) {
-                    return Lottie.memory(dotlottie.animations.values.single);
-                  } else {
-                    return Container();
-                  }
-                }),
-              ),
-            ),
-
-            const SizedBox(
-              height: 20,
-            )
           ],
         ),
       ),

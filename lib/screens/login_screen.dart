@@ -1,10 +1,12 @@
 import 'package:dotlottie_loader/dotlottie_loader.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_app/components/rounded_button.dart';
 import 'package:flutter_app/components/rounded_input_field.dart';
+import 'package:flutter_app/components/square_box.dart';
+import 'package:flutter_app/core/app_text_style.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:go_router/go_router.dart';
 import 'package:lottie/lottie.dart';
-import 'login_screen.dart';
 
 class LoginScreen extends StatelessWidget {
   const LoginScreen({super.key});
@@ -12,82 +14,131 @@ class LoginScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        body: Stack(
-      children: [
-        Positioned(
+      body: Stack(
+        children: [
+          Positioned(
             top: 0,
             child: Opacity(
-                opacity: 0.7,
-                child: SvgPicture.asset(
-                  "assets/images/up.svg",
-                  width: 200,
-                  height: 200,
-                ))),
-        Column(
-          children: [
-            SizedBox(
-              height: 100,
+              opacity: 0.7,
+              child: SvgPicture.asset(
+                "assets/images/up.svg",
+                width: 200,
+                height: 200,
+              ),
             ),
-            SvgPicture.asset(
-              "assets/images/welcome.svg",
-              width: 200,
-            ),
-            Row(mainAxisAlignment: MainAxisAlignment.center, children: [
-              Container(
-                  margin: EdgeInsets.all(5),
-                  padding: EdgeInsets.all(20),
-                  height: 350,
-                  width: 350,
-                  decoration: BoxDecoration(
-                      color: Color.fromARGB(255, 200, 200, 200),
-                      borderRadius: BorderRadius.circular(30)),
-                  child: Column(
+          ),
+          Center(
+            child: SingleChildScrollView(
+              padding: const EdgeInsets.all(20),
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Text(
+                    "Hoş Geldiniz",
+                    style: TextStyle(
+                      fontSize: 36,
+                      fontWeight: FontWeight.bold,
+                      color: Colors.deepPurple,
+                      fontFamily: 'Roboto',
+                    ),
+                  ),
+                  const SizedBox(
+                    height: 50,
+                  ),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
                     children: [
-                      RoundedInputField(
-                        hinText: "Mailiniz",
-                        icon: Icons.mail,
-                        onChange: (value) {},
-                        isEmail: true,
-                        isPassword: false,
-                      ),
-                      RoundedInputField(
-                        hinText: "Şifreniz",
-                        icon: Icons.lock,
-                        onChange: (value) {},
-                        isEmail: false,
-                        isPassword: true,
-                      ),
-                      InkWell(
-                        onTap: () => context.go("/home"),
-                        child: SizedBox(
-                          width: 150,
-                          child: DotLottieLoader.fromAsset(
-                              "assets/motions/login.lottie", frameBuilder:
-                                  (BuildContext ctx, DotLottie? dotlottie) {
-                            if (dotlottie != null) {
-                              return Lottie.memory(
-                                  dotlottie.animations.values.single);
-                            } else {
-                              return Container();
-                            }
-                          }),
+                      Container(
+                        margin: const EdgeInsets.all(5),
+                        padding: const EdgeInsets.all(20),
+                        height: 350,
+                        width: 350,
+                        decoration: BoxDecoration(
+                            color: const Color.fromARGB(255, 200, 200, 200),
+                            borderRadius: BorderRadius.circular(30)),
+                        child: Column(
+                          children: [
+                            RoundedInputField(
+                              hinText: "Mailiniz",
+                              icon: Icons.mail,
+                              onChange: (value) {},
+                              isEmail: true,
+                              isPassword: false,
+                            ),
+                            RoundedInputField(
+                              hinText: "Şifreniz",
+                              icon: Icons.lock,
+                              onChange: (value) {},
+                              isEmail: false,
+                              isPassword: true,
+                            ),
+                            Text(
+                              "Forgot Password?",
+                              style: AppTextStyle.MINI_BOLD_DESCRIPTON_TEXT,
+                            ),
+                            RoundedButton(
+                              text: "LOGİN",
+                              press: () {},
+                            )
+                          ],
                         ),
                       ),
                     ],
-                  )),
-            ])
-          ],
-        ),
-        Positioned(
+                  ),
+                  Padding(
+                    padding: const EdgeInsets.symmetric(vertical: 5),
+                    child: Row(
+                      children: [
+                        Expanded(
+                            child: Divider(
+                          indent: 50,
+                          thickness: 0.5,
+                          color: Colors.grey,
+                        )),
+                        Padding(
+                          padding: const EdgeInsets.symmetric(horizontal: 10),
+                          child: Text(
+                            "Or Contunie with",
+                            style: AppTextStyle.MINI_DESCRIPTON_TEXT,
+                          ),
+                        ),
+                        Expanded(
+                            child: Divider(
+                          indent: 50,
+                          thickness: 0.5,
+                          color: Colors.grey,
+                        )),
+                      ],
+                    ),
+                  ),
+                  SizedBox(
+                    height: 10,
+                  ),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      SquareBox(
+                        imagePath: "assets\images\google.png",
+                      ),
+                    ],
+                  )
+                ],
+              ),
+            ),
+          ),
+          Positioned(
             bottom: 0,
             child: Opacity(
-                opacity: 0.7,
-                child: SvgPicture.asset(
-                  "assets/images/down.svg",
-                  width: 100,
-                  height: 100,
-                ))),
-      ],
-    ));
+              opacity: 0.7,
+              child: SvgPicture.asset(
+                "assets/images/down.svg",
+                width: 100,
+                height: 100,
+              ),
+            ),
+          ),
+        ],
+      ),
+    );
   }
 }
