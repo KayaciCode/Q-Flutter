@@ -122,6 +122,16 @@ lib/
   
 
 ## Ekran Görüntüleri
+![bandicam 2025-01-30 22-45-21-644](https://github.com/user-attachments/assets/c6d20caa-7950-4696-9794-2635b9dee4cc)
+![bandicam 2025-01-30 22-45-25-751](https://github.com/user-attachments/assets/3b18db47-1dc8-492a-a56c-eb9e7e1c2baa)
+![bandicam 2025-01-30 22-45-28-115](https://github.com/user-attachments/assets/1119a48e-cf65-4f90-9dde-8a487b7f5918)
+![bandicam 2025-01-30 22-45-30-462](https://github.com/user-attachments/assets/b63a4d7b-40df-4304-9f05-bf6e739d10d7)
+![bandicam 2025-01-30 22-45-36-176](https://github.com/user-attachments/assets/48c728fb-4dfc-47db-99ad-47ea75d17c0e)
+![bandicam 2025-01-30 22-45-38-226](https://github.com/user-attachments/assets/ecaac268-a962-4b6d-b3b8-c8934dadfd8c)
+
+
+https://github.com/user-attachments/assets/125ad0c4-e7a6-4bbb-94e8-1d50f4576c11
+
 
 
 
@@ -158,6 +168,9 @@ lib/
 ## Teşekkürler
 
 - İstinye Üniversitesi'ne destekleri için teşekkür ederiz
+
+
+  
 
 
 
