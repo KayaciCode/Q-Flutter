@@ -1,1 +1,0 @@
-// hafızaya kalıcı okuma/yazma islemlerini yapacağız 

@@ -2,7 +2,7 @@ import 'dart:convert';
 import 'package:http/http.dart' as http;
 
 class AuthService {
-  final String baseUrl = 'http://<backend_ip_adresi>:<port>/'; // Backend adresinizi buraya girin (localhost yerine kendi ip adresiniz veya sunucu ip adresinizi girin)
+  final String baseUrl = 'http://<backend_ip_adresi>:<port>/'; 
 
   Future<Map<String, dynamic>> registerUser(Map<String, dynamic> userData) async {
     final response = await http.post(

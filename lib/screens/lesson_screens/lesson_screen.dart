@@ -5,7 +5,7 @@ import 'package:flutter_app/core/routes.dart';
 import 'package:flutter_app/widgets/lesson_card.dart';
 import 'package:go_router/go_router.dart';
 
-import '../widgets/bottom_menu.dart';
+import '../../widgets/bottom_menu.dart';
 
 class LessonScreen extends StatelessWidget {
   const LessonScreen({super.key});

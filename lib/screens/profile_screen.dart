@@ -89,7 +89,7 @@ class ProfileScreen extends StatelessWidget {
               const SizedBox(height: 20.0),
               ElevatedButton.icon(
                 onPressed: () {
-                  context.go("/login");
+                  context.go("/home");
                 },
                 icon: const Icon(CupertinoIcons.arrow_right_circle_fill),
                 label: const Text('Çıkış Yap'),

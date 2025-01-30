@@ -3,7 +3,7 @@ import 'package:http/http.dart' as http;
 
 class ApiService {
   final String baseUrl =
-      "http://192.168.1.107:3000"; // Bilgisayarının IP adresini yaz!
+      "http://192.168.1.107:3000"; 
 
   Future<void> registerUser(String name, String email, String password) async {
     final response = await http.post(

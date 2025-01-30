@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_app/screens/login_screen.dart';
-import 'package:flutter_app/screens/register_screen.dart';
+import 'package:flutter_app/screens/lesson_screens/Physics_screen.dart';
+import 'package:flutter_app/screens/lesson_screens/chemistry_screen.dart';
+import 'package:flutter_app/screens/lesson_screens/biology_screens.dart';
+import 'package:flutter_app/screens/lesson_screens/math_screen.dart';
 import 'package:flutter_app/screens/search_screen.dart';
-import 'package:flutter_app/screens/lesson_screen.dart';
+import 'package:flutter_app/screens/lesson_screens/lesson_screen.dart';
 import 'package:flutter_app/screens/settings_screen.dart';
 import 'package:flutter_app/screens/statistics_screen.dart';
 import 'package:go_router/go_router.dart';
@@ -19,7 +21,7 @@ final router = GoRouter(
     ),
     GoRoute(
       path: '/home',
-      builder: (context, state) => const HomeScreen(),
+      builder: (context, state) => HomeScreen(onThemeChanged: (newTheme) {}),
     ),
     GoRoute(
       path: '/profile',
@@ -38,16 +40,24 @@ final router = GoRouter(
       builder: (context, state) => const StatisticsScreen(),
     ),
     GoRoute(
-      path: '/login',
-      builder: (context, state) => const LoginScreen(),
-    ),
-    GoRoute(
       path: '/settings',
       builder: (context, state) => const SettingsScreen(),
     ),
     GoRoute(
-      path: '/register',
-      builder: (context, state) => const RegisterScreen(),
+      path: '/biology',
+      builder: (context, state) => const BiologyScreen(),
+    ),
+    GoRoute(
+      path: '/math',
+      builder: (context, state) => const MathScreen(),
+    ),
+    GoRoute(
+      path: '/chemistry',
+      builder: (context, state) => const ChemistryScreen(),
+    ),
+    GoRoute(
+      path: '/physics',
+      builder: (context, state) => const PhysicsScreen(),
     ),
   ],
 );

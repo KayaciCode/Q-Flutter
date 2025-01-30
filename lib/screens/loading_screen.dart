@@ -19,7 +19,7 @@ class _LoadingScreenState extends State<LoadingScreen> {
     await Future.delayed(const Duration(seconds: 2));
 
     if (mounted) {
-      context.go('/login');
+      context.go('/home');
     }
   }
 
