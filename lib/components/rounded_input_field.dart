@@ -14,7 +14,7 @@ class RoundedInputField extends StatelessWidget {
       required this.icon,
       required this.onChange,
       required this.isEmail,
-      required this.isPassword})
+      required this.isPassword, required String? Function(dynamic value) validator, required TextEditingController controller})
       : super(key: key);
 
   @override

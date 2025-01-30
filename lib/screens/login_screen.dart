@@ -1,4 +1,3 @@
-import 'package:dotlottie_loader/dotlottie_loader.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_app/components/rounded_button.dart';
 import 'package:flutter_app/components/rounded_input_field.dart';
@@ -6,7 +5,6 @@ import 'package:flutter_app/components/square_box.dart';
 import 'package:flutter_app/core/app_text_style.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:go_router/go_router.dart';
-import 'package:lottie/lottie.dart';
 
 class LoginScreen extends StatelessWidget {
   const LoginScreen({super.key});
@@ -24,6 +22,17 @@ class LoginScreen extends StatelessWidget {
                 "assets/images/up.svg",
                 width: 200,
                 height: 200,
+              ),
+            ),
+          ),
+          Positioned(
+            bottom: 0,
+            child: Opacity(
+              opacity: 0.7,
+              child: SvgPicture.asset(
+                "assets/images/down.svg",
+                width: 100,
+                height: 100,
               ),
             ),
           ),
@@ -51,8 +60,8 @@ class LoginScreen extends StatelessWidget {
                       Container(
                         margin: const EdgeInsets.all(5),
                         padding: const EdgeInsets.all(20),
-                        height: 350,
-                        width: 350,
+                        height: 300,
+                        width: 300,
                         decoration: BoxDecoration(
                             color: const Color.fromARGB(255, 200, 200, 200),
                             borderRadius: BorderRadius.circular(30)),
@@ -74,7 +83,7 @@ class LoginScreen extends StatelessWidget {
                             ),
                             Text(
                               "Forgot Password?",
-                              style: AppTextStyle.MINI_BOLD_DESCRIPTON_TEXT,
+                              style: AppTextStyle.MINI_BOLD_DESCRIPTION_TEXT,
                             ),
                             RoundedButton(
                               text: "LOGİN",
@@ -99,7 +108,7 @@ class LoginScreen extends StatelessWidget {
                           padding: const EdgeInsets.symmetric(horizontal: 10),
                           child: Text(
                             "Or Contunie with",
-                            style: AppTextStyle.MINI_DESCRIPTON_TEXT,
+                            style: AppTextStyle.MINI_DESCRIPTION_TEXT,
                           ),
                         ),
                         Expanded(
@@ -118,22 +127,38 @@ class LoginScreen extends StatelessWidget {
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
                       SquareBox(
-                        imagePath: "assets\images\google.png",
+                        imagePath: "assets/logo/google (1).png",
                       ),
+                      SizedBox(
+                        width: 25,
+                      ),
+                      SquareBox(
+                        imagePath: "assets/logo/apple (3).png",
+                      ),
+                    ],
+                  ),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      Text(
+                        "not a member?",
+                        style: AppTextStyle.MINI_DEFAULT_DESCRIPTION_TEXT,
+                      ),
+                      SizedBox(
+                        width: 5,
+                      ),
+                      TextButton(
+                        onPressed: () {
+                          context.go("/register");
+                        },
+                        child: Text(
+                          "Register Now",
+                          style: AppTextStyle.MINI_DESCRIPTION_BOLD_TEXT,
+                        ),
+                      )
                     ],
                   )
                 ],
-              ),
-            ),
-          ),
-          Positioned(
-            bottom: 0,
-            child: Opacity(
-              opacity: 0.7,
-              child: SvgPicture.asset(
-                "assets/images/down.svg",
-                width: 100,
-                height: 100,
               ),
             ),
           ),

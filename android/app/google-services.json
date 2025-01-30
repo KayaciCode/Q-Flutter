@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "259075989213",
+    "project_id": "studyhub-7c028",
+    "storage_bucket": "studyhub-7c028.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:259075989213:android:c444f9a72e342480040534",
+        "android_client_info": {
+          "package_name": "com.example.flutter_app"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCcnzYcWVd6h5KZ6m4ln7xKL7CTVGIcWcY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

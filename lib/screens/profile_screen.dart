@@ -1,11 +1,5 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_app/core/constants.dart';
-import 'package:cupertino_icons/cupertino_icons.dart';
-import 'package:flutter_app/core/routes.dart';
-import 'package:flutter_app/main.dart';
-import 'package:flutter_app/screens/loading_screen.dart';
-import 'package:flutter_app/screens/statistics_screen.dart';
 import 'package:go_router/go_router.dart';
 import '../widgets/bottom_menu.dart';
 
