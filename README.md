@@ -40,9 +40,6 @@
 - Flutter
 
 - Dart
-- SQLite
-- EST API
-- Firebase
 
 ## Başlangıç
 
@@ -55,7 +52,6 @@
 - Dart SDK (sürüm 2.19.0)
 
 - IDE: Visual Studio Code veya Android Studio
-- Ekstra: Firebase CLI
 
   
 
